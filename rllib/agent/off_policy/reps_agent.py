@@ -112,10 +112,8 @@ class REPSAgent(OffPolicyAgent):
     def default(cls, environment, critic=None, policy=None, lr=5e-4, *args, **kwargs):
         """See `AbstractAgent.default'."""
         if critic is None:
-            #critic = TabularValueFunction.default(environment)
             critic = NNValueFunction.default(environment)
         if policy is None:
-            #policy = TabularPolicy.default(environment)
             policy = NNPolicy.default(environment)
 
         optimizer = Adam(critic.parameters(), lr=lr)
