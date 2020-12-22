@@ -75,22 +75,17 @@ class REPS(AbstractAlgorithm):
         log_likelihood = torch.mean(weighted_log_p.clamp_max(1e-3))
         return -log_likelihood
 
-    def get_value_target(self, observation):
-        """Get value-function target."""
-        next_v = self.critic(observation.next_state) * (1 - observation.done)
-        return self.get_reward(observation) + 0.99 * next_v # gamma = 0.99
-
     def actor_loss(self, observation):
         """Return primal and dual loss terms from REPS."""
         state, action, reward, next_state, done, *r = observation
 
         value = self.critic(state)
         target = self.critic(next_state) * (1 - done)
-        delta = value - 0.99 * target
+        delta = value - self.gamma * target
 
-        delta[delta < 0] = 0
+        delta = torch.clamp(delta, 0, float('inf'))
 
-        dual = torch.sum(2 * torch.abs(reward) * (delta ** 0.5) - delta, dim=0) 
+        dual = - torch.sum(2 * torch.abs(reward) * (delta ** 0.5) - delta, dim=0)
         
         weights = torch.abs(reward) / (delta ** 0.5)
 

@@ -7,7 +7,7 @@ from rllib.environment import GymEnvironment
 from rllib.util.training.agent_training import evaluate_agent, train_agent
 
 ETA = 1.0
-NUM_EPISODES = 100
+NUM_EPISODES = 10
 
 GAMMA = 1
 SEED = 0
