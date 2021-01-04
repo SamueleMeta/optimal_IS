@@ -83,7 +83,7 @@ class REPS(AbstractAlgorithm):
         target = self.critic(next_state) * (1 - done)
         delta = value - self.gamma * target
 
-        delta = torch.clamp(delta, 0, float('inf'))
+        delta = torch.clamp(delta, 1e-24, float('inf'))
 
         dual = - torch.sum(2 * torch.abs(reward) * (delta ** 0.5) - delta, dim=0)
         
