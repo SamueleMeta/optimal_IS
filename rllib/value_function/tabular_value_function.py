@@ -17,7 +17,9 @@ class TabularValueFunction(NNValueFunction):
             *args,
             **kwargs,
         )
-        nn.init.zeros_(self.nn.head.weight)
+        #nn.init.zeros_(self.nn.head.weight)
+
+        nn.init.ones_(self.nn.head.weight)
 
     @property
     def table(self):
