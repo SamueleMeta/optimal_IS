@@ -1,8 +1,10 @@
 import numpy as np
+import torch
 
-def evaluate_performance(environment, policy, GAMMA):
+def evaluate_performance(environment, policy, GAMMA, agent):
 
     pi = policy.table.detach().numpy()
+    pi /= np.sum(pi, axis=1)[:,None]
 
     nS = pi.shape[0]
     nA = pi.shape[1]
@@ -29,12 +31,18 @@ def evaluate_performance(environment, policy, GAMMA):
     P = np.array(P)
         
     mu = (1-GAMMA) * np.linalg.inv(np.eye(nS) - GAMMA * pi2 @ P).T @ mu0
+
     J = mu @ pi2 @ r
 
     print(f"Performance J: {J}")
 
-    # nu_star = (mu @ pi2) * r / delta
+    value = agent.algorithm.critic(torch.tensor(np.arange(nS))).detach().numpy()
+    values = [item for item in value for i in range(nA)]
 
-    # J_star = nu_star @ r 
+    delta = values - GAMMA * P @ value
+ 
+    nu_star = (mu @ pi2) * r / delta
 
-    # print(f"Performance J_star: {J_star}"")
+    J_star = nu_star @ r 
+
+    print(f"Performance J_star: {J_star}")
