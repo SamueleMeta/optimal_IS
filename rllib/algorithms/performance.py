@@ -4,7 +4,7 @@ import torch
 def evaluate_performance(environment, policy, GAMMA, agent):
 
     pi = policy.table.detach().numpy().T
-    pi /= np.sum(pi, axis=1)[:,None]
+    pi = np.exp(pi) / np.sum(np.exp(pi), axis=1)[:, None]
 
     nS, nA = pi.shape
 
