@@ -14,6 +14,8 @@ from rllib.util.rollout import step_env
 from rllib.util.training.utilities import Evaluate
 from rllib.util.utilities import tensor_to_distribution
 
+from rllib.algorithms.notebook import run_notebook
+
 from tqdm import tqdm
 
 def rollout_episode(environment, agent, max_steps, render, gamma):
@@ -84,6 +86,8 @@ policy = TabularPolicy.default(environment)
 
 
 agent = REPSAgent.default(environment, epsilon=ETA, regularization=True, gamma=GAMMA, critic=critic, policy=policy)
+
+run_notebook(environment, policy, GAMMA, agent)
 
 print('Before training...')
 with Evaluate(agent):
