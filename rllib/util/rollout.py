@@ -20,8 +20,13 @@ def step_env(environment, state, action, action_scale, pi=None, render=False):
         action = torch.tensor(action, dtype=torch.get_default_dtype())
 
     if pi is not None:
-        with torch.no_grad():
-            entropy, log_prob_action = get_entropy_and_log_p(pi, action, action_scale)
+        try:
+            with torch.no_grad():
+                entropy, log_prob_action = get_entropy_and_log_p(
+                    pi, action, action_scale
+                )
+        except RuntimeError:
+            entropy, log_prob_action = 0.0, 1.0
     else:
         entropy, log_prob_action = 0.0, 1.0
 
@@ -81,7 +86,10 @@ def step_model(
         )
 
     if pi is not None:
-        entropy, log_prob_action = get_entropy_and_log_p(pi, action, action_scale)
+        try:
+            entropy, log_prob_action = get_entropy_and_log_p(pi, action, action_scale)
+        except RuntimeError:
+            entropy, log_prob_action = 0.0, 1.0
     else:
         entropy, log_prob_action = 0.0, 1.0
 
@@ -192,12 +200,15 @@ def rollout_agent(
     callbacks: List[Callable[[AbstractAgent, AbstractEnvironment,int], None]], optional.
         List of functions for evaluating/plotting the agent.
     """
+
     save_milestones = list() if save_milestones is None else save_milestones
     callbacks = list() if callbacks is None else callbacks
     for episode in tqdm(range(num_episodes)):
         rollout_episode(environment, agent, max_steps, render)
 
         if print_frequency and episode % print_frequency == 0:
+            with open("results.txt", "a") as file:
+                file.write(agent.__str__())
             print(agent)
         if callback_frequency and episode % callback_frequency == 0:
             for plot_callback in callbacks:
