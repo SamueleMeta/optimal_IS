@@ -96,6 +96,11 @@ class OriginalREPSAgent(OffPolicyAgent):
             self.optimizer.zero_grad()
             loss = getattr(losses, loss_name)
             loss.backward()
+            #print(loss_name, loss, loss.grad)
+            if loss_name == 'dual_loss':
+                print(list(self.algorithm.named_parameters())[14][0],
+                      list(self.algorithm.parameters())[14],
+                      list(self.algorithm.parameters())[14].grad)
             torch.nn.utils.clip_grad_norm_(
                 self.algorithm.parameters(), self.clip_gradient_val
             )

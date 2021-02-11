@@ -2,6 +2,7 @@
 
 import torch
 import torch.distributions
+from math import log
 
 from rllib.dataset.datatypes import Loss
 from rllib.util.parameter_decay import Constant, Learnable, ParameterDecay
@@ -80,7 +81,7 @@ class REPS(AbstractAlgorithm):
         td = target - value
 
         weights = td / self.eta()
-        normalizer = torch.logsumexp(weights, dim=0)
+        normalizer = torch.log(torch.mean(torch.exp(weights)))
         dual = self.eta() * (self.epsilon + normalizer) + (1.0 - self.gamma) * value
 
         nll = self._policy_weighted_nll(state, action, weights)
