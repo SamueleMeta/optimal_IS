@@ -7228,3 +7228,215 @@ Entropy          Last: 1.6      Avg: 1.6       MAvg: 1.6      Range: (1.6,1.6)
 Rewards          Last: 0.49     Avg: 0.52      MAvg: 0.52     Range: (0.49,0.57)
 Train Return     Last: 50       Avg: 53        MAvg: 53       Range: (50,58)
 ========================================================================================
+
+========================================================================================
+OriginalREPSAgent & RandomMDP
+Total episodes 1
+Total steps 101
+Train steps 0
+Entropy          Last: 1.6      Avg: 1.6       MAvg: 1.6      Range: (1.6,1.6)
+Rewards          Last: 0.5      Avg: 0.5       MAvg: 0.5      Range: (0.5,0.5)
+Train Return     Last: 51       Avg: 51        MAvg: 51       Range: (51,51)
+========================================================================================
+
+========================================================================================
+OriginalREPSAgent & RandomMDP
+Total episodes 11
+Total steps 1111
+Train steps 0
+Entropy          Last: 1.6      Avg: 1.6       MAvg: 1.6      Range: (1.6,1.6)
+Rewards          Last: 0.48     Avg: 0.52      MAvg: 0.52     Range: (0.48,0.58)
+Train Return     Last: 49       Avg: 53        MAvg: 53       Range: (49,59)
+========================================================================================
+
+========================================================================================
+OriginalREPSAgent & RandomMDP
+Total episodes 21
+Total steps 2121
+Train steps 400
+Combined Loss    Last: 2.7      Avg: 2.7       MAvg: 2.7      Range: (2.7,2.7)
+Critic Loss      Last: 0.32     Avg: 0.32      MAvg: 0.32     Range: (0.32,0.32)
+Dual Loss        Last: 1.5      Avg: 1.5       MAvg: 1.5      Range: (1.5,1.5)
+Entropy          Last: 1.6      Avg: 1.6       MAvg: 1.6      Range: (1.6,1.6)
+Eta              Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Eta Mean         Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Eta Var          Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Kl Div           Last: 0.0011   Avg: 0.0011    MAvg: 0.0011   Range: (0.0011,0.0011)
+Kl Mean          Last: 0.0011   Avg: 0.0011    MAvg: 0.0011   Range: (0.0011,0.0011)
+Kl Var           Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Policy Loss      Last: 0.86     Avg: 0.86      MAvg: 0.86     Range: (0.86,0.86)
+Reg Loss         Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Rewards          Last: 0.57     Avg: 0.53      MAvg: 0.53     Range: (0.48,0.58)
+Td Error         Last: -1e-10   Avg: -1e-10    MAvg: -1e-10   Range: (-1e-10,-1e-10)
+Train Return     Last: 58       Avg: 53        MAvg: 54       Range: (49,59)
+========================================================================================
+
+========================================================================================
+OriginalREPSAgent & RandomMDP
+Total episodes 1
+Total steps 101
+Train steps 0
+Entropy          Last: 1.6      Avg: 1.6       MAvg: 1.6      Range: (1.6,1.6)
+Rewards          Last: 0.5      Avg: 0.5       MAvg: 0.5      Range: (0.5,0.5)
+Train Return     Last: 51       Avg: 51        MAvg: 51       Range: (51,51)
+========================================================================================
+
+========================================================================================
+OriginalREPSAgent & RandomMDP
+Total episodes 11
+Total steps 1111
+Train steps 0
+Entropy          Last: 1.6      Avg: 1.6       MAvg: 1.6      Range: (1.6,1.6)
+Rewards          Last: 0.49     Avg: 0.52      MAvg: 0.52     Range: (0.49,0.58)
+Train Return     Last: 50       Avg: 53        MAvg: 53       Range: (50,59)
+========================================================================================
+
+========================================================================================
+OriginalREPSAgent & RandomMDP
+Total episodes 21
+Total steps 2121
+Train steps 400
+Combined Loss    Last: 2.7      Avg: 2.7       MAvg: 2.7      Range: (2.7,2.7)
+Critic Loss      Last: 0.32     Avg: 0.32      MAvg: 0.32     Range: (0.32,0.32)
+Dual Loss        Last: 1.5      Avg: 1.5       MAvg: 1.5      Range: (1.5,1.5)
+Entropy          Last: 1.6      Avg: 1.6       MAvg: 1.6      Range: (1.6,1.6)
+Eta              Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Eta Mean         Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Eta Var          Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Kl Div           Last: 0.0011   Avg: 0.0011    MAvg: 0.0011   Range: (0.0011,0.0011)
+Kl Mean          Last: 0.0011   Avg: 0.0011    MAvg: 0.0011   Range: (0.0011,0.0011)
+Kl Var           Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Policy Loss      Last: 0.86     Avg: 0.86      MAvg: 0.86     Range: (0.86,0.86)
+Reg Loss         Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Rewards          Last: 0.56     Avg: 0.53      MAvg: 0.53     Range: (0.49,0.58)
+Td Error         Last: -2.6e-09 Avg: -2.6e-09  MAvg: -2.6e-09 Range: (-2.6e-09,-2.6e-09)
+Train Return     Last: 57       Avg: 53        MAvg: 54       Range: (50,59)
+========================================================================================
+
+========================================================================================
+OriginalREPSAgent & RandomMDP
+Total episodes 1
+Total steps 101
+Train steps 0
+Entropy          Last: 1.6      Avg: 1.6       MAvg: 1.6      Range: (1.6,1.6)
+Rewards          Last: 0.5      Avg: 0.5       MAvg: 0.5      Range: (0.5,0.5)
+Train Return     Last: 51       Avg: 51        MAvg: 51       Range: (51,51)
+========================================================================================
+
+========================================================================================
+OriginalREPSAgent & RandomMDP
+Total episodes 11
+Total steps 1111
+Train steps 0
+Entropy          Last: 1.6      Avg: 1.6       MAvg: 1.6      Range: (1.6,1.6)
+Rewards          Last: 0.49     Avg: 0.52      MAvg: 0.52     Range: (0.49,0.58)
+Train Return     Last: 50       Avg: 53        MAvg: 53       Range: (50,59)
+========================================================================================
+
+========================================================================================
+OriginalREPSAgent & RandomMDP
+Total episodes 21
+Total steps 2121
+Train steps 400
+Combined Loss    Last: 2.7      Avg: 2.7       MAvg: 2.7      Range: (2.7,2.7)
+Critic Loss      Last: 0.32     Avg: 0.32      MAvg: 0.32     Range: (0.32,0.32)
+Dual Loss        Last: 1.5      Avg: 1.5       MAvg: 1.5      Range: (1.5,1.5)
+Entropy          Last: 1.6      Avg: 1.6       MAvg: 1.6      Range: (1.6,1.6)
+Eta              Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Eta Mean         Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Eta Var          Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Kl Div           Last: 0.0011   Avg: 0.0011    MAvg: 0.0011   Range: (0.0011,0.0011)
+Kl Mean          Last: 0.0011   Avg: 0.0011    MAvg: 0.0011   Range: (0.0011,0.0011)
+Kl Var           Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Policy Loss      Last: 0.86     Avg: 0.86      MAvg: 0.86     Range: (0.86,0.86)
+Reg Loss         Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Rewards          Last: 0.57     Avg: 0.53      MAvg: 0.53     Range: (0.49,0.58)
+Td Error         Last: -1.3e-09 Avg: -1.3e-09  MAvg: -1.3e-09 Range: (-1.3e-09,-1.3e-09)
+Train Return     Last: 57       Avg: 53        MAvg: 54       Range: (50,59)
+========================================================================================
+
+========================================================================================
+OriginalREPSAgent & RandomMDP
+Total episodes 1
+Total steps 101
+Train steps 0
+Entropy          Last: 1.6      Avg: 1.6       MAvg: 1.6      Range: (1.6,1.6)
+Rewards          Last: 0.5      Avg: 0.5       MAvg: 0.5      Range: (0.5,0.5)
+Train Return     Last: 51       Avg: 51        MAvg: 51       Range: (51,51)
+========================================================================================
+
+========================================================================================
+OriginalREPSAgent & RandomMDP
+Total episodes 11
+Total steps 1111
+Train steps 0
+Entropy          Last: 1.6      Avg: 1.6       MAvg: 1.6      Range: (1.6,1.6)
+Rewards          Last: 0.5      Avg: 0.52      MAvg: 0.52     Range: (0.5,0.57)
+Train Return     Last: 50       Avg: 53        MAvg: 53       Range: (50,58)
+========================================================================================
+
+========================================================================================
+OriginalREPSAgent & RandomMDP
+Total episodes 21
+Total steps 2121
+Train steps 400
+Combined Loss    Last: 1.7      Avg: 1.7       MAvg: 1.7      Range: (1.7,1.7)
+Critic Loss      Last: 0.32     Avg: 0.32      MAvg: 0.32     Range: (0.32,0.32)
+Dual Loss        Last: 0.55     Avg: 0.55      MAvg: 0.55     Range: (0.55,0.55)
+Entropy          Last: 1.6      Avg: 1.6       MAvg: 1.6      Range: (1.6,1.6)
+Eta              Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Eta Mean         Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Eta Var          Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Kl Div           Last: 0.0011   Avg: 0.0011    MAvg: 0.0011   Range: (0.0011,0.0011)
+Kl Mean          Last: 0.0011   Avg: 0.0011    MAvg: 0.0011   Range: (0.0011,0.0011)
+Kl Var           Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Policy Loss      Last: 0.78     Avg: 0.78      MAvg: 0.78     Range: (0.78,0.78)
+Reg Loss         Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Rewards          Last: 0.56     Avg: 0.53      MAvg: 0.53     Range: (0.49,0.57)
+Td Error         Last: -7.6e-10 Avg: -7.6e-10  MAvg: -7.6e-10 Range: (-7.6e-10,-7.6e-10)
+Train Return     Last: 57       Avg: 53        MAvg: 54       Range: (50,58)
+========================================================================================
+
+========================================================================================
+OriginalREPSAgent & RandomMDP
+Total episodes 31
+Total steps 3131
+Train steps 800
+Combined Loss    Last: 1.6      Avg: 1.6       MAvg: 1.6      Range: (1.6,1.7)
+Critic Loss      Last: 0.33     Avg: 0.32      MAvg: 0.32     Range: (0.32,0.33)
+Dual Loss        Last: 0.55     Avg: 0.55      MAvg: 0.55     Range: (0.55,0.55)
+Entropy          Last: 1.6      Avg: 1.6       MAvg: 1.6      Range: (1.6,1.6)
+Eta              Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Eta Mean         Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Eta Var          Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Kl Div           Last: 0.00052  Avg: 0.00081   MAvg: 0.00081  Range: (0.00052,0.0011)
+Kl Mean          Last: 0.00052  Avg: 0.00081   MAvg: 0.00081  Range: (0.00052,0.0011)
+Kl Var           Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Policy Loss      Last: 0.72     Avg: 0.75      MAvg: 0.75     Range: (0.72,0.78)
+Reg Loss         Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Rewards          Last: 0.52     Avg: 0.53      MAvg: 0.52     Range: (0.49,0.58)
+Td Error         Last: -1.7e-09 Avg: -1.2e-09  MAvg: -1.2e-09 Range: (-1.7e-09,-7.6e-10)
+Train Return     Last: 53       Avg: 53        MAvg: 53       Range: (49,58)
+========================================================================================
+
+========================================================================================
+OriginalREPSAgent & RandomMDP
+Total episodes 41
+Total steps 4141
+Train steps 800
+Combined Loss    Last: 1.6      Avg: 1.6       MAvg: 1.6      Range: (1.6,1.7)
+Critic Loss      Last: 0.33     Avg: 0.32      MAvg: 0.32     Range: (0.32,0.33)
+Dual Loss        Last: 0.55     Avg: 0.55      MAvg: 0.55     Range: (0.55,0.55)
+Entropy          Last: 1.6      Avg: 1.6       MAvg: 1.6      Range: (1.6,1.6)
+Eta              Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Eta Mean         Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Eta Var          Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Kl Div           Last: 0.00052  Avg: 0.00081   MAvg: 0.00081  Range: (0.00052,0.0011)
+Kl Mean          Last: 0.00052  Avg: 0.00081   MAvg: 0.00081  Range: (0.00052,0.0011)
+Kl Var           Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Policy Loss      Last: 0.72     Avg: 0.75      MAvg: 0.75     Range: (0.72,0.78)
+Reg Loss         Last: 0        Avg: 0         MAvg: 0        Range: (0,0)
+Rewards          Last: 0.57     Avg: 0.53      MAvg: 0.56     Range: (0.49,0.61)
+Td Error         Last: -1.7e-09 Avg: -1.2e-09  MAvg: -1.2e-09 Range: (-1.7e-09,-7.6e-10)
+Train Return     Last: 58       Avg: 54        MAvg: 57       Range: (49,61)
+========================================================================================
