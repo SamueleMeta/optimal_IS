@@ -8,6 +8,7 @@ from rllib.dataset.datatypes import Observation
 from rllib.util.training.utilities import Evaluate
 from rllib.util.utilities import get_entropy_and_log_p, tensor_to_distribution
 
+from datetime import datetime
 
 def step_env(environment, state, action, action_scale, pi=None, render=False):
     """Perform a single step in an environment."""
@@ -201,13 +202,15 @@ def rollout_agent(
         List of functions for evaluating/plotting the agent.
     """
 
+    rnd = datetime.now()
+
     save_milestones = list() if save_milestones is None else save_milestones
     callbacks = list() if callbacks is None else callbacks
     for episode in tqdm(range(num_episodes)):
         rollout_episode(environment, agent, max_steps, render)
 
         if print_frequency and episode % print_frequency == 0:
-            with open("results.txt", "a") as file:
+            with open(f"results{rnd}.txt", "a") as file:
                 file.write(agent.__str__())
             print(agent)
         if callback_frequency and episode % callback_frequency == 0:

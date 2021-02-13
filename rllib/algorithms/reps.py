@@ -58,7 +58,8 @@ class REPS(AbstractAlgorithm):
         """Return weighted policy negative log-likelihood."""
         pi = tensor_to_distribution(self.policy(state), **self.policy.dist_params)
         _, action_log_p = get_entropy_and_log_p(pi, action, self.policy.action_scale)
-        weighted_log_p = weights.detach() * action_log_p
+        weighted_log_p = torch.exp(weights.detach()) * action_log_p
+        #weighted_log_p = weights.detach() * action_log_p
 
         # Clamping is crucial for stability so that it does not converge to a delta.
         log_likelihood = torch.mean(weighted_log_p.clamp_max(1e-3))
@@ -81,7 +82,10 @@ class REPS(AbstractAlgorithm):
         td = target - value
 
         weights = td / self.eta()
-        normalizer = torch.log(torch.mean(torch.exp(weights)))
+        w_max = torch.max(weights)
+
+        normalizer = w_max + torch.log(torch.mean(torch.exp(weights - w_max)))
+
         dual = self.eta() * (self.epsilon + normalizer) + (1.0 - self.gamma) * value
 
         nll = self._policy_weighted_nll(state, action, weights)

@@ -99,7 +99,7 @@ with Evaluate(agent):
 '''
 
 #train_agent(optimalIS_agent, environment, num_episodes=NUM_EPISODES, max_steps=MAX_STEPS + 1, plot_flag=False, print_frequency=100)
-train_agent(reps_agent, environment, num_episodes=NUM_EPISODES, max_steps=MAX_STEPS + 1, plot_flag=False, print_frequency=10)
+train_agent(reps_agent, environment, num_episodes=NUM_EPISODES, max_steps=MAX_STEPS + 1, plot_flag=False, print_frequency=100)
 
 
 print('After training...')
