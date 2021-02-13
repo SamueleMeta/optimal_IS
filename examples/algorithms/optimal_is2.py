@@ -2,8 +2,8 @@
 import numpy as np
 import torch
 
-from rllib.agent import REPSAgent
-from rllib.agent.off_policy.original_reps_agent import OriginalREPSAgent
+from rllib.agent.off_policy.optimalIS_agent import OptimalISAgent
+from rllib.agent.off_policy.reps_agent import REPSAgent
 from rllib.environment.mdps import RandomMDP
 from rllib.util.training.agent_training import train_agent
 
@@ -86,8 +86,8 @@ environment = RandomMDP(num_states=5, num_actions=5)
 critic = TabularValueFunction.default(environment)
 policy = TabularPolicy.default(environment)
 
-#agent = REPSAgent.default(environment, epsilon=ETA, regularization=True, gamma=GAMMA, critic=critic, policy=policy)
-original_agent = OriginalREPSAgent.default(environment, epsilon=ETA, regularization=True, gamma=GAMMA, critic=critic, policy=policy)
+#optimalIS_agent = OptimalISAgent.default(environment, epsilon=ETA, regularization=True, gamma=GAMMA, critic=critic, policy=policy)
+reps_agent = REPSAgent.default(environment, epsilon=ETA, regularization=True, gamma=GAMMA, critic=critic, policy=policy)
 
 '''
 run_notebook(environment, policy, GAMMA, agent)
@@ -98,21 +98,21 @@ with Evaluate(agent):
     evaluate_performance(environment, agent.policy, GAMMA, agent)
 '''
 
-#train_agent(agent, environment, num_episodes=NUM_EPISODES, max_steps=MAX_STEPS + 1, plot_flag=False, print_frequency=100)
-train_agent(original_agent, environment, num_episodes=NUM_EPISODES, max_steps=MAX_STEPS + 1, plot_flag=False, print_frequency=10)
+#train_agent(optimalIS_agent, environment, num_episodes=NUM_EPISODES, max_steps=MAX_STEPS + 1, plot_flag=False, print_frequency=100)
+train_agent(reps_agent, environment, num_episodes=NUM_EPISODES, max_steps=MAX_STEPS + 1, plot_flag=False, print_frequency=10)
 
 
 print('After training...')
 '''
 with Evaluate(agent):
-    empirical_performance = evaluate_agent(agent, environment, num_episodes=100, max_steps=MAX_STEPS + 1, gamma=GAMMA)
+    empirical_performance = evaluate_agent(optimalIS_agent, environment, num_episodes=100, max_steps=MAX_STEPS + 1, gamma=GAMMA)
     with open("results.txt", "a") as file:
                 file.write(f"empirical_performance: {empirical_performance}")
-    evaluate_performance(environment, agent.policy, GAMMA, agent)
+    evaluate_performance(environment, optimalIS_agent.policy, GAMMA, optimalIS_agent)
 
 '''
 with Evaluate(original_agent):
-    empirical_performance = evaluate_agent(original_agent, environment, num_episodes=100, max_steps=MAX_STEPS + 1, gamma=GAMMA)
+    empirical_performance = evaluate_agent(reps_agent, environment, num_episodes=100, max_steps=MAX_STEPS + 1, gamma=GAMMA)
     with open("results.txt", "a") as file:
                 file.write(f"empirical_performance: {empirical_performance}")
-    evaluate_performance(environment, original_agent.policy, GAMMA, original_agent)
+    evaluate_performance(environment, reps_agent.policy, GAMMA, reps_agent)

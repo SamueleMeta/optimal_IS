@@ -7440,3 +7440,53 @@ Rewards          Last: 0.57     Avg: 0.53      MAvg: 0.56     Range: (0.49,0.61)
 Td Error         Last: -1.7e-09 Avg: -1.2e-09  MAvg: -1.2e-09 Range: (-1.7e-09,-7.6e-10)
 Train Return     Last: 58       Avg: 54        MAvg: 57       Range: (49,61)
 ========================================================================================
+
+========================================================================================
+OriginalREPSAgent & RandomMDP
+Total episodes 1
+Total steps 101
+Train steps 0
+Entropy          Last: 1.6      Avg: 1.6       MAvg: 1.6      Range: (1.6,1.6)
+Rewards          Last: 0.5      Avg: 0.5       MAvg: 0.5      Range: (0.5,0.5)
+Train Return     Last: 51       Avg: 51        MAvg: 51       Range: (51,51)
+========================================================================================
+
+========================================================================================
+OriginalREPSAgent & RandomMDP
+Total episodes 11
+Total steps 1111
+Train steps 0
+Entropy          Last: 1.6      Avg: 1.6       MAvg: 1.6      Range: (1.6,1.6)
+Rewards          Last: 0.49     Avg: 0.52      MAvg: 0.52     Range: (0.49,0.57)
+Train Return     Last: 50       Avg: 53        MAvg: 53       Range: (50,58)
+========================================================================================
+
+========================================================================================
+OptimalISAgent & RandomMDP
+Total episodes 1
+Total steps 101
+Train steps 0
+Entropy          Last: 1.6      Avg: 1.6       MAvg: 1.6      Range: (1.6,1.6)
+Rewards          Last: 0.5      Avg: 0.5       MAvg: 0.5      Range: (0.5,0.5)
+Train Return     Last: 50       Avg: 50        MAvg: 50       Range: (50,50)
+========================================================================================
+
+========================================================================================
+REPSAgent & RandomMDP
+Total episodes 1
+Total steps 101
+Train steps 0
+Entropy          Last: 1.6      Avg: 1.6       MAvg: 1.6      Range: (1.6,1.6)
+Rewards          Last: 0.5      Avg: 0.5       MAvg: 0.5      Range: (0.5,0.5)
+Train Return     Last: 51       Avg: 51        MAvg: 51       Range: (51,51)
+========================================================================================
+
+========================================================================================
+REPSAgent & RandomMDP
+Total episodes 11
+Total steps 1111
+Train steps 0
+Entropy          Last: 1.6      Avg: 1.6       MAvg: 1.6      Range: (1.6,1.6)
+Rewards          Last: 0.48     Avg: 0.52      MAvg: 0.52     Range: (0.48,0.57)
+Train Return     Last: 49       Avg: 53        MAvg: 53       Range: (49,58)
+========================================================================================

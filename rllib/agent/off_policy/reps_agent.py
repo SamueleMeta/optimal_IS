@@ -5,22 +5,18 @@ from torch.optim import Adam
 
 from rllib.algorithms.reps import REPS
 from rllib.policy import NNPolicy
-from rllib.policy import TabularPolicy
 from rllib.util.neural_networks.utilities import deep_copy_module
 from rllib.value_function import NNValueFunction
-from rllib.value_function import TabularValueFunction
 
 from .off_policy_agent import OffPolicyAgent
 
 
 class REPSAgent(OffPolicyAgent):
     """Implementation of the REPS algorithm.
-
     References
     ----------
     Peters, J., Mulling, K., & Altun, Y. (2010, July).
     Relative entropy policy search. AAAI.
-
     Deisenroth, M. P., Neumann, G., & Peters, J. (2013).
     A survey on policy search for robotics. Foundations and Trends® in Robotics.
     """
@@ -100,6 +96,11 @@ class REPSAgent(OffPolicyAgent):
             self.optimizer.zero_grad()
             loss = getattr(losses, loss_name)
             loss.backward()
+            #print(loss_name, loss, loss.grad)
+            if loss_name == 'dual_loss':
+                print(list(self.algorithm.named_parameters())[14][0],
+                      list(self.algorithm.parameters())[14],
+                      list(self.algorithm.parameters())[14].grad)
             torch.nn.utils.clip_grad_norm_(
                 self.algorithm.parameters(), self.clip_gradient_val
             )
@@ -117,8 +118,6 @@ class REPSAgent(OffPolicyAgent):
             policy = NNPolicy.default(environment)
 
         optimizer = Adam(critic.parameters(), lr=lr)
-
-        #print(f"The env has state with dimension: {environment.dim_state} and {environment.dim_action} actions!")
 
         return super().default(
             environment,
